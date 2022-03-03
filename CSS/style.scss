@@ -455,7 +455,7 @@ $btnColor: #1da95b;
           text-align: center;
         }
       }
-      &__form {
+      &__form__otp {
         height: 42px;
         margin: 18.13px 0 32px;
         display: grid;
@@ -464,10 +464,9 @@ $btnColor: #1da95b;
         border: none !important;
         outline: none !important;
         grid-template-columns: repeat(6, 1fr);
-        input {
-          max-width: 42px !important;
+        input[type="text"] {
+          width: 42px !important;
           height: 42px !important;
-          box-sizing: border-box;
           text-align: center;
           border: 2px solid #e0e0e0;
           border-radius: 8px;
