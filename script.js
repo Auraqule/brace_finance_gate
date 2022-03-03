@@ -77,6 +77,7 @@ const logosArr = [...logos];
 logosArr.map((logo) => {
     logo.addEventListener("click", () => {
         if (logo !== logosArr[0]) {
+            logosArr[4] && window.location.reload();
             logo.parentNode.parentNode.parentNode.style.cssText =
                 "display: none !important;";
             gate1.style.cssText = "display:block !important;";
@@ -85,8 +86,9 @@ logosArr.map((logo) => {
 });
 // RESPONSIBLE FOR EXITING EACH PAGE => EXITING PAGE TO THE HOME PAGE WHEN THE USER CLICKS ON THE EXIT BUTTON
 const exitsArr = [...exits];
-exitsArr.map((exit) => {
+exitsArr.map((exit, index) => {
     exit.addEventListener("click", () => {
+        index === 9 && window.location.reload();
         exit.parentNode.parentNode.parentNode.style.cssText =
             "display: none !important;";
         gate1.style.cssText = "display:block !important;";
