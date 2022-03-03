@@ -1,3 +1,6 @@
+let gate2IsOPen: boolean = false;
+let gate4IsOPen: boolean = false;
+let newUserpassword: HTMLInputElement;
 let userEmailInput: HTMLInputElement;
 let userTelephoneInput: HTMLInputElement;
 let displayUserEnteredEmail: NodeList; // DISPLAY USER ENTERED EMAIL ON GATE 8
@@ -198,6 +201,8 @@ const submitHandler = (e: any): void => {
 // "ONSUBMIT" EVENTLISTENERS => responsible for handling whaterver happens anytime a form is submitted
 gate2Form.addEventListener("submit", (e): void => {
   submitHandler(e);
+  // TOGGLE GATE-2 TO EITHER OPEN OR CLOSE
+  gate2IsOPen = !gate2IsOPen;
   gate2.style.cssText = "display:none !important;";
   // ROUTE THE USER TO THE APPROPRIATE GATE BASED ON THE CONDITION THAT THEY HAVE THEIR RECORD IN THE DATABASE OR NOT
   //  IF THE USER HAS A RECORD ? ROUTE THEM TO THE LOGIN GATE : OTHERWISE TO THE SIGN UP GATE
@@ -220,8 +225,13 @@ gate3Form.addEventListener("submit", (e): void => {
 });
 gate4Form.addEventListener("submit", (e): void => {
   submitHandler(e);
+  // TOGGLE GATE-4 TO EITHER OPEN OR CLOSE
+  gate4IsOPen = !gate4IsOPen;
   gate4.style.cssText = "display:none !important;";
-  gate5.style.cssText = "display:block !important;";
+
+  userTelephoneInput.value === "7066389644"
+    ? (gate5.style.cssText = "display:block !important;")
+    : (gate10.style.cssText = "display:block !important;");
 
   autofillUserEnteredPhoneNo.value = userTelephoneInput.value;
   autofillUserEnteredPhoneNo.value.length <= 10
@@ -249,6 +259,33 @@ gate7Form.addEventListener("submit", (e): void => {
   submitHandler(e);
   gate7.style.cssText = "display:none !important;";
   gate2.style.cssText = "display:block !important;";
+});
+
+gate10Form.addEventListener("submit", (e): void => {
+  submitHandler(e);
+  newUserpassword = document.querySelector("#new-user-password")!;
+  // NEW USER AUTHENTICATION REGEX PATTERN
+  const userPasswordPattern = /^(?=.*\d).{9,}$/;
+  if (userPasswordPattern.test(newUserpassword.value)) {
+    gate10.style.cssText = "display:none !important;";
+    if (gate2IsOPen && !gate4IsOPen) {
+      gate8.style.cssText = "display:block !important;";
+      return;
+    }
+    if (gate4IsOPen && !gate2IsOPen) {
+      gate9.style.cssText = "display:block !important;";
+      return;
+    } else {
+      // location.reload();
+      gate2IsOPen = !gate2IsOPen;
+      gate4IsOPen = !gate4IsOPen;
+      gate2.style.cssText = "display:block !important;";
+      return;
+    }
+  } else {
+    newUserpassword.value = "";
+    newUserpassword.setAttribute("placeholder", "Invalid Password!");
+  }
 });
 
 // FORGOT PASSWORD HANDLER
