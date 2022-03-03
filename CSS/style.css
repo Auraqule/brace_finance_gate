@@ -1,0 +1,1041 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "BR Firma";
+  src: url("../fonts/BR Firma Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: "BR Firma", "Gothic A1", sans-serif;
+  font-size: 62.5%;
+}
+
+.btn {
+  width: 296px;
+  height: 56px;
+  background-color: #1da95b;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.privacy-policy {
+  font-size: 1.2rem;
+  width: 201px;
+  text-align: center;
+  margin: auto;
+  line-height: 20px;
+  color: #444e50;
+}
+
+.privacy-policy span {
+  font-weight: bold;
+}
+
+.back-left {
+  width: 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.back-left img {
+  width: 16px;
+  height: 16px;
+}
+
+.exit-right,
+.exit,
+.logo,
+.logo-left {
+  cursor: pointer;
+}
+
+.hyperlink {
+  cursor: pointer;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-eye-toggle,
+.password-eye-reveal {
+  position: absolute;
+  right: 16px;
+  top: 40%;
+  cursor: pointer;
+}
+
+#auto-fill-authentication-tel {
+  padding-left: 100px !important;
+  padding-right: 50px !important;
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+}
+
+.ts-tel {
+  padding-left: 100px !important;
+}
+
+.Wrapper-All {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrapper-All .gate-1,
+.Wrapper-All .gate-2,
+.Wrapper-All .gate-3,
+.Wrapper-All .gate-4,
+.Wrapper-All .gate-5,
+.Wrapper-All .gate-6,
+.Wrapper-All .gate-7,
+.Wrapper-All .gate-8,
+.Wrapper-All .gate-9,
+.Wrapper-All .gate-10,
+.Wrapper-All .gate-11,
+.Wrapper-All .gate-12,
+.Wrapper-All .gate-13 {
+  width: 100%;
+  min-height: 600px;
+  max-height: 600px;
+  min-width: 320px;
+  max-width: 380px;
+  padding: 0 0 41px;
+}
+
+.Wrapper-All .gate-1 {
+  display: block !important;
+  background-color: #182327;
+  padding-top: 25px;
+}
+
+.Wrapper-All .gate-1__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Wrapper-All .gate-1__main__header .logo {
+  margin: auto;
+  width: 142px;
+  height: 37.2px;
+}
+
+.Wrapper-All .gate-1__main__header .logo img {
+  margin: auto;
+}
+
+.Wrapper-All .gate-1__main__header .exit {
+  width: 94%;
+  height: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.Wrapper-All .gate-1__main__header .exit img {
+  position: absolute;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.Wrapper-All .gate-1__main__header h2 {
+  margin: 45px 0 36px;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.Wrapper-All .gate-1__main__content {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.Wrapper-All .gate-1__main__content .safe {
+  margin-bottom: 24px;
+}
+
+.Wrapper-All .gate-1__main__content .safe,
+.Wrapper-All .gate-1__main__content .secure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 84px;
+  width: 291px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Wrapper-All .gate-1__main__content .btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Wrapper-All .gate-1__main__content .btn--update {
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.Wrapper-All .gate-1__main__content .privacy-policy {
+  color: #ffffff;
+}
+
+.Wrapper-All .gate-3 .btn--update {
+  margin-bottom: 55px !important;
+}
+
+.Wrapper-All .gate-5 .btn--update {
+  margin-bottom: 39px !important;
+}
+
+.Wrapper-All .gate-2,
+.Wrapper-All .gate-3,
+.Wrapper-All .gate-4,
+.Wrapper-All .gate-5,
+.Wrapper-All .gate-6,
+.Wrapper-All .gate-7,
+.Wrapper-All .gate-8,
+.Wrapper-All .gate-9,
+.Wrapper-All .gate-10,
+.Wrapper-All .gate-11,
+.Wrapper-All .gate-12,
+.Wrapper-All .gate-13 {
+  display: none;
+}
+
+.Wrapper-All .gate-2__main,
+.Wrapper-All .gate-3__main,
+.Wrapper-All .gate-4__main,
+.Wrapper-All .gate-5__main,
+.Wrapper-All .gate-6__main,
+.Wrapper-All .gate-7__main,
+.Wrapper-All .gate-8__main,
+.Wrapper-All .gate-9__main,
+.Wrapper-All .gate-10__main,
+.Wrapper-All .gate-11__main,
+.Wrapper-All .gate-12__main,
+.Wrapper-All .gate-13__main {
+  max-height: 600px;
+}
+
+.Wrapper-All .gate-2__main__header,
+.Wrapper-All .gate-3__main__header,
+.Wrapper-All .gate-4__main__header,
+.Wrapper-All .gate-5__main__header,
+.Wrapper-All .gate-6__main__header,
+.Wrapper-All .gate-7__main__header,
+.Wrapper-All .gate-8__main__header,
+.Wrapper-All .gate-9__main__header,
+.Wrapper-All .gate-10__main__header,
+.Wrapper-All .gate-11__main__header,
+.Wrapper-All .gate-12__main__header,
+.Wrapper-All .gate-13__main__header {
+  padding: 0 24px;
+  width: 100%;
+  height: 70px;
+  background-color: #182327;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrapper-All .gate-2__main__content,
+.Wrapper-All .gate-3__main__content,
+.Wrapper-All .gate-4__main__content,
+.Wrapper-All .gate-5__main__content,
+.Wrapper-All .gate-6__main__content,
+.Wrapper-All .gate-7__main__content,
+.Wrapper-All .gate-8__main__content,
+.Wrapper-All .gate-9__main__content,
+.Wrapper-All .gate-10__main__content,
+.Wrapper-All .gate-11__main__content,
+.Wrapper-All .gate-12__main__content,
+.Wrapper-All .gate-13__main__content {
+  position: relative;
+  top: -10px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 48px 0 30px;
+}
+
+.Wrapper-All .gate-2__main__content h1,
+.Wrapper-All .gate-3__main__content h1,
+.Wrapper-All .gate-4__main__content h1,
+.Wrapper-All .gate-5__main__content h1,
+.Wrapper-All .gate-6__main__content h1,
+.Wrapper-All .gate-7__main__content h1,
+.Wrapper-All .gate-8__main__content h1,
+.Wrapper-All .gate-9__main__content h1,
+.Wrapper-All .gate-10__main__content h1,
+.Wrapper-All .gate-11__main__content h1,
+.Wrapper-All .gate-12__main__content h1,
+.Wrapper-All .gate-13__main__content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #182327;
+  text-align: center;
+}
+
+.Wrapper-All .gate-2__main__content p.sub-header,
+.Wrapper-All .gate-3__main__content p.sub-header,
+.Wrapper-All .gate-4__main__content p.sub-header,
+.Wrapper-All .gate-5__main__content p.sub-header,
+.Wrapper-All .gate-6__main__content p.sub-header,
+.Wrapper-All .gate-7__main__content p.sub-header,
+.Wrapper-All .gate-8__main__content p.sub-header,
+.Wrapper-All .gate-9__main__content p.sub-header,
+.Wrapper-All .gate-10__main__content p.sub-header,
+.Wrapper-All .gate-11__main__content p.sub-header,
+.Wrapper-All .gate-12__main__content p.sub-header,
+.Wrapper-All .gate-13__main__content p.sub-header {
+  font-size: 1.6rem;
+  color: #444e50;
+  text-align: center;
+  margin: 12px 0 32px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 208px;
+}
+
+.Wrapper-All .gate-2__main__content__form,
+.Wrapper-All .gate-3__main__content__form,
+.Wrapper-All .gate-4__main__content__form,
+.Wrapper-All .gate-5__main__content__form,
+.Wrapper-All .gate-6__main__content__form,
+.Wrapper-All .gate-7__main__content__form,
+.Wrapper-All .gate-8__main__content__form,
+.Wrapper-All .gate-9__main__content__form,
+.Wrapper-All .gate-10__main__content__form,
+.Wrapper-All .gate-11__main__content__form,
+.Wrapper-All .gate-12__main__content__form,
+.Wrapper-All .gate-13__main__content__form {
+  font-size: 1.4rem;
+  color: #182327;
+}
+
+.Wrapper-All .gate-2__main__content__form label,
+.Wrapper-All .gate-3__main__content__form label,
+.Wrapper-All .gate-4__main__content__form label,
+.Wrapper-All .gate-5__main__content__form label,
+.Wrapper-All .gate-6__main__content__form label,
+.Wrapper-All .gate-7__main__content__form label,
+.Wrapper-All .gate-8__main__content__form label,
+.Wrapper-All .gate-9__main__content__form label,
+.Wrapper-All .gate-10__main__content__form label,
+.Wrapper-All .gate-11__main__content__form label,
+.Wrapper-All .gate-12__main__content__form label,
+.Wrapper-All .gate-13__main__content__form label {
+  font-weight: 600;
+}
+
+.Wrapper-All .gate-2__main__content__form input:focus,
+.Wrapper-All .gate-3__main__content__form input:focus,
+.Wrapper-All .gate-4__main__content__form input:focus,
+.Wrapper-All .gate-5__main__content__form input:focus,
+.Wrapper-All .gate-6__main__content__form input:focus,
+.Wrapper-All .gate-7__main__content__form input:focus,
+.Wrapper-All .gate-8__main__content__form input:focus,
+.Wrapper-All .gate-9__main__content__form input:focus,
+.Wrapper-All .gate-10__main__content__form input:focus,
+.Wrapper-All .gate-11__main__content__form input:focus,
+.Wrapper-All .gate-12__main__content__form input:focus,
+.Wrapper-All .gate-13__main__content__form input:focus {
+  border: 2px solid #1da95b !important;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="email"],
+.Wrapper-All .gate-2__main__content__form input[type="tel"],
+.Wrapper-All .gate-3__main__content__form input[type="email"],
+.Wrapper-All .gate-3__main__content__form input[type="tel"],
+.Wrapper-All .gate-4__main__content__form input[type="email"],
+.Wrapper-All .gate-4__main__content__form input[type="tel"],
+.Wrapper-All .gate-5__main__content__form input[type="email"],
+.Wrapper-All .gate-5__main__content__form input[type="tel"],
+.Wrapper-All .gate-6__main__content__form input[type="email"],
+.Wrapper-All .gate-6__main__content__form input[type="tel"],
+.Wrapper-All .gate-7__main__content__form input[type="email"],
+.Wrapper-All .gate-7__main__content__form input[type="tel"],
+.Wrapper-All .gate-8__main__content__form input[type="email"],
+.Wrapper-All .gate-8__main__content__form input[type="tel"],
+.Wrapper-All .gate-9__main__content__form input[type="email"],
+.Wrapper-All .gate-9__main__content__form input[type="tel"],
+.Wrapper-All .gate-10__main__content__form input[type="email"],
+.Wrapper-All .gate-10__main__content__form input[type="tel"],
+.Wrapper-All .gate-11__main__content__form input[type="email"],
+.Wrapper-All .gate-11__main__content__form input[type="tel"],
+.Wrapper-All .gate-12__main__content__form input[type="email"],
+.Wrapper-All .gate-12__main__content__form input[type="tel"],
+.Wrapper-All .gate-13__main__content__form input[type="email"],
+.Wrapper-All .gate-13__main__content__form input[type="tel"] {
+  width: 296px;
+  height: 48px;
+  padding-left: 16px;
+  border-radius: 8px;
+  outline: none;
+  margin: 8px 0 12px !important;
+  border: 1.5px solid #e0e0e0;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="tel"]::-webkit-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="email"]::-webkit-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="tel"]::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="tel"]:-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="email"]:-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="tel"]:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="tel"]::-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="email"]::-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="tel"]::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="tel"]::placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="email"]::placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="tel"]::placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="password"],
+.Wrapper-All .gate-2__main__content__form input[type="text"],
+.Wrapper-All .gate-3__main__content__form input[type="password"],
+.Wrapper-All .gate-3__main__content__form input[type="text"],
+.Wrapper-All .gate-4__main__content__form input[type="password"],
+.Wrapper-All .gate-4__main__content__form input[type="text"],
+.Wrapper-All .gate-5__main__content__form input[type="password"],
+.Wrapper-All .gate-5__main__content__form input[type="text"],
+.Wrapper-All .gate-6__main__content__form input[type="password"],
+.Wrapper-All .gate-6__main__content__form input[type="text"],
+.Wrapper-All .gate-7__main__content__form input[type="password"],
+.Wrapper-All .gate-7__main__content__form input[type="text"],
+.Wrapper-All .gate-8__main__content__form input[type="password"],
+.Wrapper-All .gate-8__main__content__form input[type="text"],
+.Wrapper-All .gate-9__main__content__form input[type="password"],
+.Wrapper-All .gate-9__main__content__form input[type="text"],
+.Wrapper-All .gate-10__main__content__form input[type="password"],
+.Wrapper-All .gate-10__main__content__form input[type="text"],
+.Wrapper-All .gate-11__main__content__form input[type="password"],
+.Wrapper-All .gate-11__main__content__form input[type="text"],
+.Wrapper-All .gate-12__main__content__form input[type="password"],
+.Wrapper-All .gate-12__main__content__form input[type="text"],
+.Wrapper-All .gate-13__main__content__form input[type="password"],
+.Wrapper-All .gate-13__main__content__form input[type="text"] {
+  padding-right: 40px;
+  width: 296px;
+  height: 48px;
+  padding-left: 16px;
+  border-radius: 8px;
+  outline: none;
+  margin: 8px 0 12px;
+  position: relative;
+  border: 1.5px solid #e0e0e0;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="text"]::-webkit-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="password"]::-webkit-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="text"]::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="text"]:-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="password"]:-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="text"]:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="text"]::-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="password"]::-ms-input-placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="text"]::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-2__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-3__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-4__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-5__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-6__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-7__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-8__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-9__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-10__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-11__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-12__main__content__form input[type="text"]::placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="password"]::placeholder,
+.Wrapper-All .gate-13__main__content__form input[type="text"]::placeholder {
+  color: #a1a1a1;
+}
+
+.Wrapper-All .gate-2__main__content__form h4,
+.Wrapper-All .gate-3__main__content__form h4,
+.Wrapper-All .gate-4__main__content__form h4,
+.Wrapper-All .gate-5__main__content__form h4,
+.Wrapper-All .gate-6__main__content__form h4,
+.Wrapper-All .gate-7__main__content__form h4,
+.Wrapper-All .gate-8__main__content__form h4,
+.Wrapper-All .gate-9__main__content__form h4,
+.Wrapper-All .gate-10__main__content__form h4,
+.Wrapper-All .gate-11__main__content__form h4,
+.Wrapper-All .gate-12__main__content__form h4,
+.Wrapper-All .gate-13__main__content__form h4 {
+  font-weight: 600;
+  color: #1da95b;
+  width: 50%;
+}
+
+.Wrapper-All .gate-2__main__content__form h5,
+.Wrapper-All .gate-3__main__content__form h5,
+.Wrapper-All .gate-4__main__content__form h5,
+.Wrapper-All .gate-5__main__content__form h5,
+.Wrapper-All .gate-6__main__content__form h5,
+.Wrapper-All .gate-7__main__content__form h5,
+.Wrapper-All .gate-8__main__content__form h5,
+.Wrapper-All .gate-9__main__content__form h5,
+.Wrapper-All .gate-10__main__content__form h5,
+.Wrapper-All .gate-11__main__content__form h5,
+.Wrapper-All .gate-12__main__content__form h5,
+.Wrapper-All .gate-13__main__content__form h5 {
+  color: #939393;
+}
+
+.Wrapper-All .gate-2__main__content__form .btn--update,
+.Wrapper-All .gate-3__main__content__form .btn--update,
+.Wrapper-All .gate-4__main__content__form .btn--update,
+.Wrapper-All .gate-5__main__content__form .btn--update,
+.Wrapper-All .gate-6__main__content__form .btn--update,
+.Wrapper-All .gate-7__main__content__form .btn--update,
+.Wrapper-All .gate-8__main__content__form .btn--update,
+.Wrapper-All .gate-9__main__content__form .btn--update,
+.Wrapper-All .gate-10__main__content__form .btn--update,
+.Wrapper-All .gate-11__main__content__form .btn--update,
+.Wrapper-All .gate-12__main__content__form .btn--update,
+.Wrapper-All .gate-13__main__content__form .btn--update {
+  margin-top: 20px;
+  margin-bottom: 125px;
+}
+
+.Wrapper-All .gate-6 {
+  height: 600px;
+}
+
+.Wrapper-All .gate-6__main__content {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-animation: sk-chase 2.5s infinite linear both;
+          animation: sk-chase 2.5s infinite linear both;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: sk-chase-dot 2s infinite ease-in-out both;
+          animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: #1da95b;
+  border-radius: 100%;
+  -webkit-animation: sk-chase-dot-before 2s infinite ease-in-out both;
+          animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(1) {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(2) {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(3) {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(4) {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(5) {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(6) {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(1):before {
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(2):before {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(3):before {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(4):before {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(5):before {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+.Wrapper-All .gate-6__main__content .sk-chase-dot:nth-child(6):before {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+
+@-webkit-keyframes sk-chase {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-chase-dot {
+  80%,
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-chase-dot {
+  80%,
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes sk-chase-dot-before {
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100%,
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes sk-chase-dot-before {
+  50% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100%,
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.Wrapper-All .gate-6__main__content .logging-in-msg {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: #444e50;
+}
+
+.Wrapper-All footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 171px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.2rem;
+  margin-top: 16px;
+  color: #666666;
+  padding-bottom: 10px;
+}
+
+.Wrapper-All footer span {
+  font-weight: bold;
+}
+
+.Wrapper-All .gate-8__main__content .auth-sub-header,
+.Wrapper-All .gate-9__main__content .auth-sub-header,
+.Wrapper-All .gate-12__main__content .auth-sub-header,
+.Wrapper-All .gate-13__main__content .auth-sub-header {
+  font-size: 1.6rem;
+  line-height: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 12px 0 32px;
+}
+
+.Wrapper-All .gate-8__main__content .auth-sub-header .display-authentication-email,
+.Wrapper-All .gate-8__main__content .auth-sub-header .display-authentication-phone-no,
+.Wrapper-All .gate-9__main__content .auth-sub-header .display-authentication-email,
+.Wrapper-All .gate-9__main__content .auth-sub-header .display-authentication-phone-no,
+.Wrapper-All .gate-12__main__content .auth-sub-header .display-authentication-email,
+.Wrapper-All .gate-12__main__content .auth-sub-header .display-authentication-phone-no,
+.Wrapper-All .gate-13__main__content .auth-sub-header .display-authentication-email,
+.Wrapper-All .gate-13__main__content .auth-sub-header .display-authentication-phone-no {
+  color: #1da95b;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Wrapper-All .gate-8__main__content__form,
+.Wrapper-All .gate-9__main__content__form,
+.Wrapper-All .gate-12__main__content__form,
+.Wrapper-All .gate-13__main__content__form {
+  height: 42px;
+  margin: 18.13px 0 32px;
+  display: -ms-grid;
+  display: grid;
+  width: 292px;
+  grid-gap: 8px;
+  border: none !important;
+  outline: none !important;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.Wrapper-All .gate-8__main__content__form input,
+.Wrapper-All .gate-9__main__content__form input,
+.Wrapper-All .gate-12__main__content__form input,
+.Wrapper-All .gate-13__main__content__form input {
+  max-width: 42px !important;
+  height: 42px !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding-left: unset !important;
+}
+
+.Wrapper-All .gate-8__main__content__form input:focus,
+.Wrapper-All .gate-9__main__content__form input:focus,
+.Wrapper-All .gate-12__main__content__form input:focus,
+.Wrapper-All .gate-13__main__content__form input:focus {
+  border: none;
+  outline: 2px solid #1da95b;
+}
+
+.Wrapper-All .gate-8__main__content .code-issue,
+.Wrapper-All .gate-9__main__content .code-issue,
+.Wrapper-All .gate-12__main__content .code-issue,
+.Wrapper-All .gate-13__main__content .code-issue {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.Wrapper-All .gate-8__main__content .code-issue span,
+.Wrapper-All .gate-9__main__content .code-issue span,
+.Wrapper-All .gate-12__main__content .code-issue span,
+.Wrapper-All .gate-13__main__content .code-issue span {
+  cursor: pointer;
+  color: #1da95b;
+}
+
+.Wrapper-All .gate-8__main__content .code-issue-resolve,
+.Wrapper-All .gate-9__main__content .code-issue-resolve,
+.Wrapper-All .gate-12__main__content .code-issue-resolve,
+.Wrapper-All .gate-13__main__content .code-issue-resolve {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.Wrapper-All .gate-8__main__content .code-issue-resolve span,
+.Wrapper-All .gate-9__main__content .code-issue-resolve span,
+.Wrapper-All .gate-12__main__content .code-issue-resolve span,
+.Wrapper-All .gate-13__main__content .code-issue-resolve span {
+  color: #1da95b;
+}
+
+.Wrapper-All .gate-11--modify {
+  min-height: 375px !important;
+  max-height: 440px;
+}
+
+.Wrapper-All .gate-11--modify__main__content {
+  height: auto !important;
+}
+/*# sourceMappingURL=style.css.map */

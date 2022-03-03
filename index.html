@@ -1,0 +1,558 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <title>Brace Finance</title>
+  </head>
+  <body>
+    <section class="Wrapper-All">
+      <!-- GATE-1/PAGE-1 BEGINS HERE -->
+      <!-- HOMEPAGE -->
+      <section id="ts-gate-1" class="gate-1">
+        <main class="gate-1__main">
+          <div class="gate-1__main__header">
+            <div class="exit">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+            <div class="logo">
+              <img src="./Assets/logo.png" alt="logo" />
+            </div>
+            <h2>Brace finance enables payment authentication for this app</h2>
+          </div>
+          <div class="gate-1__main__content">
+            <div class="safe">
+              <img src="./Assets/safe.png" alt="safe image" />
+              <p>
+                Your email address or phone number will be used to login or
+                signup.
+              </p>
+            </div>
+            <div class="secure">
+              <img src="./Assets/secure.png" alt="secure image" />
+              <p>
+                Your funds will be safeguarded by security compliant services.
+              </p>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn--update btn-gate-1">Get Started</button>
+            </div>
+            <p class="privacy-policy">
+              by clicking continue, you agree to
+              <span> Brace end user privacy policy</span>
+            </p>
+          </div>
+          <div class="gate-1__main__footer"></div>
+        </main>
+      </section>
+      <!-- GATE-2/PAGE-2 BEGINS HERE -->
+      <!-- LOGIN OR SIGN UP WITH EMAIL -->
+      <section id="ts-gate-2" class="gate-2">
+        <main class="gate-2__main">
+          <div class="gate-2__main__header">
+            <div class="logo-left">
+              <img src="./Assets/mini-logo.png" alt="Brace Finance logo" />
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-2__main__content">
+            <h1>Connect with Brace</h1>
+            <p class="sub-header">Enter your account details to continue</p>
+            <form id="ts-gate2-form" class="gate-2__main__content__form">
+              <label for="ts-email">Email address</label>
+              <br />
+              <input
+                id="ts-email"
+                type="email"
+                placeholder="Enter your email address"
+                autofocus
+                required
+              />
+              <h4 class="hyperlink ts-use-phone-instead">Use Phone Instead</h4>
+              <button class="btn btn--update">Log In Or Sign Up</button>
+            </form>
+            <p class="privacy-policy privacy-policy--modify">
+              by clicking continue, you agree to
+              <span> Brace end user privacy policy</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-3/PAGE-3 BEGINS HERE -->
+      <!-- LOGIN WITH VALIDATED EMAIL PASSWORD -->
+      <section id="ts-gate-3" class="gate-3">
+        <main class="gate-3__main">
+          <div class="gate-3__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-3__main__content">
+            <h1>Log In</h1>
+            <p class="sub-header">To access your account</p>
+            <form id="ts-gate3-form" class="gate-3__main__content__form">
+              <label for="auto-fill-authentication-email">Email address</label>
+              <br />
+              <input
+                id="auto-fill-authentication-email"
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <br />
+              <label for="password">Password</label>
+              <br />
+              <div class="password-container">
+                <input
+                  class="ts-password"
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <img
+                  style="color: green"
+                  class="password-eye-toggle"
+                  src="./Assets/hide-eye.png"
+                  alt="toggle hide or display password"
+                />
+              </div>
+              <h4 class="hyperlink Forgot-password">Forgot Password?</h4>
+              <button class="btn btn--update">Log In</button>
+            </form>
+            <p class="privacy-policy privacy-policy--modify">
+              by clicking continue, you agree to
+              <span> Brace end user privacy policy</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-4/PAGE-4 BEGINS HERE -->
+      <!-- LOGIN WITH VALIDATED PHONE NUMBER -->
+      <section id="ts-gate-4" class="gate-4">
+        <main class="gate-4__main">
+          <div class="gate-4__main__header">
+            <div class="logo-left">
+              <img src="./Assets/mini-logo.png" alt="Brace Finance logo" />
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-4__main__content">
+            <h1>Connect with Brace</h1>
+            <p class="sub-header">Enter your account details to continue</p>
+            <form id="ts-gate4-form" class="gate-4__main__content__form">
+              <label for="ts-tel">Phone number</label>
+              <br />
+              <input
+                id="ts-tel"
+                class="ts-tel"
+                type="tel"
+                minlength="7"
+                maxlength="10"
+                placeholder="Enter your phone number"
+                required
+              />
+
+              <h4 class="hyperlink ts-use-email-instead">Use Email Instead</h4>
+              <button id="btnSubmit" class="btn btn--update btnSubmit">
+                Log In Or Sign Up
+              </button>
+            </form>
+            <p class="privacy-policy privacy-policy--modify">
+              by clicking continue, you agree to
+              <span> Brace end user privacy policy</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-5/PAGE-5 BEGINS HERE -->
+      <!-- LOGIN WITH VALIDATED PHONE NUMBER PASSWORD -->
+      <section id="ts-gate-5" class="gate-5">
+        <main class="gate-5__main">
+          <div class="gate-5__main__header">
+            <div class="logo-left">
+              <img src="./Assets/mini-logo.png" alt="Brace Finance logo" />
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-5__main__content">
+            <h1>Connect with Brace</h1>
+            <p class="sub-header">Enter your account details to continue</p>
+            <form id="ts-gate5-form" class="gate-5__main__content__form">
+              <label for="auto-fill-authentication-tel">Phone number</label>
+              <br />
+              <input
+                class="ts-tel"
+                id="auto-fill-authentication-tel"
+                type="tel"
+                placeholder="Phone no"
+                required
+              />
+              <br />
+              <label for="password">Password</label>
+              <br />
+              <div class="password-container">
+                <input
+                  class="ts-password"
+                  type="password"
+                  placeholder="Enter your password"
+                  required
+                />
+                <img
+                  class="password-eye-toggle"
+                  src="./Assets/hide-eye.png"
+                  alt="toggle hide or display password"
+                />
+              </div>
+
+              <h4 class="hyperlink Forgot-password">Forgot Password?</h4>
+              <button class="btn btn--update btnSubmit">Log In</button>
+            </form>
+            <p class="privacy-policy privacy-policy--modify">
+              by clicking continue, you agree to
+              <span> Brace end user privacy policy</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-6/PAGE-6 BEGINS HERE -->
+      <!-- LOGGIN IN PROCESS PAGE -->
+      <section id="ts-gate-6" class="gate-6">
+        <main class="gate-6__main">
+          <div class="gate-6__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-6__main__content">
+            <div class="sk-chase">
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+              <div class="sk-chase-dot"></div>
+            </div>
+            <p class="logging-in-msg">Logging you in...</p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-7/PAGE-7 BEGINS HERE -->
+      <!-- FORGOT PASSWORD/RESET PASSWORD -->
+      <section id="ts-gate-7" class="gate-7">
+        <main class="gate-7__main">
+          <div class="gate-7__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-7__main__content">
+            <h1>Forgot Password?</h1>
+            <p class="sub-header">
+              Enter your credentials to reset your password
+            </p>
+            <form id="ts-gate7-form" class="gate-7__main__content__form">
+              <label class="ts-label" for="email">Email address</label>
+              <br />
+              <input
+                class="ts-input"
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <h4 class="hyperlink forgot-password-use-phone-instead">
+                Use Phone Instead
+              </h4>
+              <button class="btn btn--update">Reset Password</button>
+            </form>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-8/PAGE-8 BEGINS HERE -->
+      <!-- OTP REGISTRATION WITH EMAIL -->
+      <section id="ts-gate-8" class="gate-8">
+        <main class="gate-8__main">
+          <div class="gate-8__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-8__main__content">
+            <h1>Register</h1>
+            <p class="auth-sub-header">
+              Please enter the 6-digit code sent to
+              <span class="display-authentication-email"
+                >falolasheyie@gmail.com</span
+              >
+            </p>
+            <img
+              class="email-login-forward-icon gate-8-forward-icon"
+              src="./Assets/send-icon.png"
+              alt="send icon"
+            />
+            <form id="ts-gate8-form" class="gate-8__main__content__form">
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+            </form>
+            <p class="code-issue">
+              Code not received? <span class="hyperlink">Resend code</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-9/PAGE-9 BEGINS HERE -->
+      <!-- OTP REGISTRATION WITH PHONE NUMBER -->
+      <section id="ts-gate-9" class="gate-9">
+        <main class="gate-9__main">
+          <div class="gate-9__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-9__main__content">
+            <h1>Register</h1>
+            <p class="auth-sub-header">
+              Please enter the 6-digit code sent to
+              <span class="display-authentication-phone-no"
+                >+2348135150505</span
+              >
+            </p>
+            <img
+              class="tel-login-forward-icon gate-9-forward-icon"
+              src="./Assets/send-icon.png"
+              alt="send icon"
+            />
+            <form id="ts-gate9-form" class="gate-9__main__content__form">
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+            </form>
+            <p class="code-issue">Code not received? <span></span></p>
+            <p class="code-issue-resolve">
+              <span class="hyperlink">Resend code</span> or
+              <span class="hyperlink">Call my phone</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-10/PAGE-10 BEGINS HERE -->
+      <!-- REGISTERATION WITH A VALID PASSWORD I.E CHOOSE YOUR PASSWORD -->
+      <section id="ts-gate-10" class="gate-10">
+        <main class="gate-10__main">
+          <div class="gate-10__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-10__main__content">
+            <h1>Log In</h1>
+            <p class="sub-header">
+              Select a password to keep your account safe & secure
+            </p>
+            <form id="ts-gate10-form" class="gate-10__main__content__form">
+              <label for="password">Password</label>
+              <br />
+              <div class="password-container">
+                <input
+                  class="ts-password"
+                  type="password"
+                  placeholder="Select a password"
+                  required
+                />
+                <img
+                  class="password-eye-toggle"
+                  src="./Assets/hide-eye.png"
+                  alt="toggle hide or display password"
+                />
+              </div>
+
+              <h5>Minimum of 8 letters and a number</h5>
+              <button class="btn btn--update">Sign Up</button>
+            </form>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-11/PAGE-11 BEGINS HERE -->
+      <!-- CONNECTION SUCCESSFUL PAGE -->
+      <section id="ts-gate-11" class="gate-11 gate-11--modify">
+        <main class="gate-11__main">
+          <div class="gate-11__main__header">
+            <div class="logo-left">
+              <img src="./Assets/mini-logo.png" alt="Brace Finance logo" />
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-11__main__content">
+            <h1>welcome back</h1>
+            <p class="sub-header">Connection successful!</p>
+            <img src="./Assets/welcome.png" alt="" />
+          </div>
+        </main>
+      </section>
+      <!-- GATE-12/PAGE-12 BEGINS HERE -->
+      <!-- LOGIN WITH OTP SENT TO EMAIL -->
+      <section id="ts-gate-12" class="gate-12">
+        <main class="gate-12__main">
+          <div class="gate-12__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-12__main__content">
+            <h1>Log In</h1>
+            <p class="auth-sub-header">
+              Please enter the 6-digit code sent to
+              <span class="display-authentication-email"
+                >falolasheyie@gmail.com</span
+              >
+            </p>
+            <img
+              class="email-login-forward-icon gate-12-forward-icon"
+              src="./Assets/send-icon.png"
+              alt="send icon"
+            />
+            <form class="gate-12__main__content__form">
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+            </form>
+            <p class="code-issue">
+              Code not received? <span class="hyperlink">Resend code</span>
+            </p>
+          </div>
+        </main>
+      </section>
+      <!-- GATE-13/PAGE-13 BEGINS HERE -->
+      <!-- LOGIN WITH OTP SENT TO PHONE NUMBER -->
+      <section id="ts-gate-13" class="gate-13">
+        <main class="gate-13__main">
+          <div class="gate-13__main__header">
+            <div class="back-left">
+              <img src="./Assets/left-arrow.png" alt="Brace Finance logo" />
+              <h3>back</h3>
+            </div>
+            <div class="exit-right">
+              <img src="./Assets/exit.png" alt="exit button" />
+            </div>
+          </div>
+          <div class="gate-13__main__content">
+            <h1>Log In</h1>
+            <p class="auth-sub-header">
+              Please enter the 6-digit code sent to
+              <span class="display-authentication-phone-no"
+                >+2348135150505</span
+              >
+            </p>
+            <img
+              class="tel-login-forward-icon gate-13-forward-icon"
+              src="./Assets/send-icon.png"
+              alt="send icon"
+            />
+            <form class="gate-13__main__content__form">
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+              <input type="text" required />
+            </form>
+            <p class="code-issue">Code not received? <span></span></p>
+            <p class="code-issue-resolve">
+              <span class="hyperlink">Resend code</span> or
+              <span class="hyperlink">Call my phone</span>
+            </p>
+          </div>
+        </main>
+      </section>
+
+      <!-- FIXED SECURED BY BRACE FINANCE MESSAGE -->
+      <footer>
+        <img src="./Assets/green-lock.png" alt="secure lock icon" />
+        <p>Secured by <span>Brace Finance</span></p>
+      </footer>
+    </section>
+    <script src="./script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/css/intlTelInput.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.8/js/intlTelInput-jquery.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(function () {
+        let code = "+234"; // Assigning value from model.
+        $(".ts-tel").val(code);
+        $(".ts-tel").intlTelInput({
+          autoHideDialCode: true,
+          autoPlaceholder: "ON",
+          dropdownContainer: document.body,
+          formatOnDisplay: true,
+          hiddenInput: "full_number",
+          initialCountry: "auto",
+          nationalMode: true,
+          placeholderNumberType: "MOBILE",
+          preferredCountries: ["US", "NG"],
+          separateDialCode: true,
+        });
+      });
+    </script>
+  </body>
+</html>
