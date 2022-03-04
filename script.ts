@@ -8,6 +8,125 @@ let displayUserEnteredPhoneNo: NodeList; // DISPLAY USER ENTERED PHONE NO ON GAT
 let autofillUserEnteredEmail: HTMLInputElement; // AUTO FILLS GATE/PAGE 3 EMAIL INPUT WITH USER ENTERED EMAIL
 let autofillUserEnteredPhoneNo: HTMLInputElement; // AUTO FILLS GATE/PAGE 5 TEL INPUT WITH USER ENTERED PBONE NUMBER
 
+// QUERY DOM FOR USER OTP INPUT
+const otp1Gate8 = document.getElementById("ts-otp1-gt8") as HTMLInputElement;
+const otp2Gate8 = document.getElementById("ts-otp2-gt8") as HTMLInputElement;
+const otp3Gate8 = document.getElementById("ts-otp3-gt8") as HTMLInputElement;
+const otp4Gate8 = document.getElementById("ts-otp4-gt8") as HTMLInputElement;
+const otp5Gate8 = document.getElementById("ts-otp5-gt8") as HTMLInputElement;
+const otp6Gate8 = document.getElementById("ts-otp6-gt8") as HTMLInputElement;
+
+const otp1Gate9 = document.getElementById("ts-otp1-gt9") as HTMLInputElement;
+const otp2Gate9 = document.getElementById("ts-otp2-gt9") as HTMLInputElement;
+const otp3Gate9 = document.getElementById("ts-otp3-gt9") as HTMLInputElement;
+const otp4Gate9 = document.getElementById("ts-otp4-gt9") as HTMLInputElement;
+const otp5Gate9 = document.getElementById("ts-otp5-gt9") as HTMLInputElement;
+const otp6Gate9 = document.getElementById("ts-otp6-gt9") as HTMLInputElement;
+
+const otp1Gate12 = document.getElementById("ts-otp1-gt12") as HTMLInputElement;
+const otp2Gate12 = document.getElementById("ts-otp2-gt12") as HTMLInputElement;
+const otp3Gate12 = document.getElementById("ts-otp3-gt12") as HTMLInputElement;
+const otp4Gate12 = document.getElementById("ts-otp4-gt12") as HTMLInputElement;
+const otp5Gate12 = document.getElementById("ts-otp5-gt12") as HTMLInputElement;
+const otp6Gate12 = document.getElementById("ts-otp6-gt12") as HTMLInputElement;
+
+const otp1Gate13 = document.getElementById("ts-otp1-gt13") as HTMLInputElement;
+const otp2Gate13 = document.getElementById("ts-otp2-gt13") as HTMLInputElement;
+const otp3Gate13 = document.getElementById("ts-otp3-gt13") as HTMLInputElement;
+const otp4Gate13 = document.getElementById("ts-otp4-gt13") as HTMLInputElement;
+const otp5Gate13 = document.getElementById("ts-otp5-gt13") as HTMLInputElement;
+const otp6Gate13 = document.getElementById("ts-otp6-gt13") as HTMLInputElement;
+
+// MAKING THE USER ENTERD OTPS INTO THEIR RESPECTIVE ARRAYS
+const gate8Arr: HTMLInputElement[] = [
+  otp1Gate8,
+  otp2Gate8,
+  otp3Gate8,
+  otp4Gate8,
+  otp5Gate8,
+  otp6Gate8,
+];
+const gate9Arr: HTMLInputElement[] = [
+  otp1Gate9,
+  otp2Gate9,
+  otp3Gate9,
+  otp4Gate9,
+  otp5Gate9,
+  otp6Gate9,
+];
+const gate12Arr: HTMLInputElement[] = [
+  otp1Gate12,
+  otp2Gate12,
+  otp3Gate12,
+  otp4Gate12,
+  otp5Gate12,
+  otp6Gate12,
+];
+const gate13Arr: HTMLInputElement[] = [
+  otp1Gate13,
+  otp2Gate13,
+  otp3Gate13,
+  otp4Gate13,
+  otp5Gate13,
+  otp6Gate13,
+];
+
+// USER OTP NON-EMPTINESS VALIDATION
+// FUCNTION TO TEST THE NON-EMPTINESS OF OTP INPUTS
+
+const checkOTPIsNonEmpty = (OTPS: any) => {
+  let result: boolean | string;
+  result =
+    (OTPS[0].value &&
+      OTPS[1].value &&
+      OTPS[2].value &&
+      OTPS[3].value &&
+      OTPS[4].value &&
+      OTPS[5].value) !== "";
+  return result;
+};
+
+// THIHS FUNCTION HIDES AND DISPLAYS ANOTHER PAGE
+function hideAndDisplayPage(hidePage: any, displayPage: any) {
+  hidePage.style.cssText = "display:none !important;";
+  displayPage.style.cssText = "display:block !important;";
+}
+
+// OTP INPUT BOX EMPTYNESS CHECK FOR GATE 8
+
+otp6Gate8.addEventListener("click", () => {
+  setTimeout(() => {
+    const otpStatus = checkOTPIsNonEmpty(gate8Arr);
+    otpStatus && hideAndDisplayPage(gate8, gate11);
+  }, 2000);
+});
+
+// OTP INPUT BOX EMPTYNESS CHECK FOR GATE 9
+
+otp6Gate9.addEventListener("click", () => {
+  setTimeout(() => {
+    const otpStatus = checkOTPIsNonEmpty(gate9Arr);
+    otpStatus && hideAndDisplayPage(gate9, gate11);
+  }, 2500);
+});
+// OTP INPUT BOX EMPTYNESS CHECK FOR GATE 12
+
+otp6Gate12.addEventListener("click", () => {
+  setTimeout(() => {
+    const otpStatus = checkOTPIsNonEmpty(gate12Arr);
+    otpStatus && hideAndDisplayPage(gate12, gate11);
+  }, 2500);
+});
+
+// OTP INPUT BOX EMPTYNESS CHECK FOR GATE 13
+
+otp6Gate13.addEventListener("click", () => {
+  setTimeout(() => {
+    const otpStatus = checkOTPIsNonEmpty(gate13Arr);
+    otpStatus && hideAndDisplayPage(gate13, gate11);
+  }, 2500);
+});
+
 // QUERY DOM FOR PAGES/GATES  I.E SECTION ELEMENTS
 const gate1 = document.getElementById("ts-gate-1")!;
 const gate2 = document.getElementById("ts-gate-2")!;
@@ -107,7 +226,7 @@ logosArr.map((logo: any) => {
 const exitsArr = [...exits];
 exitsArr.map((exit: any, index: number) => {
   exit.addEventListener("click", () => {
-    index === 9 && window.location.reload();
+    (index === 7 || index === 8 || index === 9) && window.location.reload();
     exit.parentNode.parentNode.parentNode.style.cssText =
       "display: none !important;";
     gate1.style.cssText = "display:block !important;";
@@ -151,7 +270,8 @@ backBtnsArr.map((backBtn: any, index: number) => {
     if (index === 5) {
       backBtn.parentNode.parentNode.parentNode.style.cssText =
         "display: none !important;";
-      gate9.style.cssText = "display:block !important;";
+      location.reload();
+      gate2.style.cssText = "display:block !important;";
       return;
     }
     if (index === 6) {
