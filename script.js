@@ -79,38 +79,144 @@ const checkOTPIsNonEmpty = (OTPS) => {
             OTPS[5].value) !== "";
     return result;
 };
-// THIHS FUNCTION HIDES AND DISPLAYS ANOTHER PAGE
+// THIS FUNCTION HIDES AND DISPLAYS ANOTHER PAGE
 function hideAndDisplayPage(hidePage, displayPage) {
     hidePage.style.cssText = "display:none !important;";
     displayPage.style.cssText = "display:block !important;";
 }
+// function to move the OTP input focus to the next OTP input box
+function otpBoxFocusShiftHandler(currentOtpNo, nextOtpNo) {
+    if (currentOtpNo.value) {
+        nextOtpNo.focus();
+    }
+}
+//  MOVES THE OTP INPUT FOCUS TO THE NEXT INPUT
+gate8Arr.map((otp, index) => {
+    otp.addEventListener("input", () => {
+        if (index === 0) {
+            otpBoxFocusShiftHandler(otp1Gate8, otp2Gate8);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusShiftHandler(otp2Gate8, otp3Gate8);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusShiftHandler(otp3Gate8, otp4Gate8);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusShiftHandler(otp4Gate8, otp5Gate8);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusShiftHandler(otp5Gate8, otp6Gate8);
+            return;
+        }
+    });
+});
+//  MOVES THE OTP INPUT FOCUS TO THE NEXT INPUT
+gate9Arr.map((otp, index) => {
+    otp.addEventListener("input", () => {
+        if (index === 0) {
+            otpBoxFocusShiftHandler(otp1Gate9, otp2Gate9);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusShiftHandler(otp2Gate9, otp3Gate9);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusShiftHandler(otp3Gate9, otp4Gate9);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusShiftHandler(otp4Gate9, otp5Gate9);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusShiftHandler(otp5Gate9, otp6Gate9);
+            return;
+        }
+    });
+});
+//  MOVES THE OTP INPUT FOCUS TO THE NEXT INPUT
+gate12Arr.map((otp, index) => {
+    otp.addEventListener("input", () => {
+        if (index === 0) {
+            otpBoxFocusShiftHandler(otp1Gate12, otp2Gate12);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusShiftHandler(otp2Gate12, otp3Gate12);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusShiftHandler(otp3Gate12, otp4Gate12);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusShiftHandler(otp4Gate12, otp5Gate12);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusShiftHandler(otp5Gate12, otp6Gate12);
+            return;
+        }
+    });
+});
+gate13Arr.map((otp, index) => {
+    otp.addEventListener("input", () => {
+        if (index === 0) {
+            otpBoxFocusShiftHandler(otp1Gate13, otp2Gate13);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusShiftHandler(otp2Gate13, otp3Gate13);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusShiftHandler(otp3Gate13, otp4Gate13);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusShiftHandler(otp4Gate13, otp5Gate13);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusShiftHandler(otp5Gate13, otp6Gate13);
+            return;
+        }
+    });
+});
+// ROUTE TO SUBMIT PAGE IF OTP IS COMPLETE
 // OTP INPUT BOX EMPTYNESS CHECK FOR GATE 8
-otp6Gate8.addEventListener("click", () => {
+otp6Gate8.addEventListener("input", () => {
     setTimeout(() => {
         const otpStatus = checkOTPIsNonEmpty(gate8Arr);
         otpStatus && hideAndDisplayPage(gate8, gate11);
-    }, 2000);
+    }, 400);
 });
 // OTP INPUT BOX EMPTYNESS CHECK FOR GATE 9
-otp6Gate9.addEventListener("click", () => {
+otp6Gate9.addEventListener("input", () => {
     setTimeout(() => {
         const otpStatus = checkOTPIsNonEmpty(gate9Arr);
         otpStatus && hideAndDisplayPage(gate9, gate11);
-    }, 2500);
+    }, 400);
 });
 // OTP INPUT BOX EMPTYNESS CHECK FOR GATE 12
-otp6Gate12.addEventListener("click", () => {
+otp6Gate12.addEventListener("input", () => {
     setTimeout(() => {
         const otpStatus = checkOTPIsNonEmpty(gate12Arr);
         otpStatus && hideAndDisplayPage(gate12, gate11);
-    }, 2500);
+    }, 400);
 });
 // OTP INPUT BOX EMPTYNESS CHECK FOR GATE 13
-otp6Gate13.addEventListener("click", () => {
+otp6Gate13.addEventListener("input", () => {
     setTimeout(() => {
         const otpStatus = checkOTPIsNonEmpty(gate13Arr);
         otpStatus && hideAndDisplayPage(gate13, gate11);
-    }, 2500);
+    }, 400);
 });
 // QUERY DOM FOR PAGES/GATES  I.E SECTION ELEMENTS
 const gate1 = document.getElementById("ts-gate-1");
@@ -308,7 +414,7 @@ gate4Form.addEventListener("submit", (e) => {
         : (gate10.style.cssText = "display:block !important;");
     autofillUserEnteredPhoneNo.value = userTelephoneInput.value;
     autofillUserEnteredPhoneNo.value.length <= 10
-        ? (autofillUserEnteredPhoneNo.style.cssText = `background-image:url("../Assets/check-mark.png"); `)
+        ? (autofillUserEnteredPhoneNo.style.cssText = `background-image:url("./Assets/check-mark.png"); `)
         : null;
     const twoDisplayUserEnteredPhoneNo = [...displayUserEnteredPhoneNo];
     twoDisplayUserEnteredPhoneNo.map((eachDisplayPhoneNo) => {
@@ -356,8 +462,23 @@ gate10Form.addEventListener("submit", (e) => {
         }
     }
     else {
+        newUserpassword.addEventListener("keyup", (event) => {
+            if (newUserpassword.value.length >= 8) {
+                if (userPasswordPattern.test(newUserpassword.value)) {
+                    newUserpassword.style.cssText = "border-color: #1da95b !important";
+                    console.log(newUserpassword.value.length);
+                }
+                else {
+                    newUserpassword.style.cssText = "border-color: red !important";
+                }
+            }
+            else {
+                newUserpassword.style.cssText = "border-color: red !important";
+            }
+        });
+        newUserpassword.style.cssText = "border-color: red !important";
         newUserpassword.value = "";
-        newUserpassword.setAttribute("placeholder", "Invalid Password!");
+        // newUserpassword.setAttribute("placeholder", "Invalid Password!");
     }
 });
 // FORGOT PASSWORD HANDLER

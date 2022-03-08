@@ -90,6 +90,7 @@ html {
 #auto-fill-authentication-tel {
   padding-left: 100px !important;
   padding-right: 50px !important;
+  background-image: url("../Assets/green-lock.png");
   background-repeat: no-repeat;
   background-position: 90% 50%;
 }
