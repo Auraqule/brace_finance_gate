@@ -27,6 +27,12 @@ html {
   outline: none;
   border-radius: 16px;
   cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 .privacy-policy {
@@ -57,6 +63,12 @@ html {
   font-weight: 600;
   color: #ffffff;
   cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.back-left:hover {
+  opacity: 0.8;
 }
 
 .back-left img {
@@ -69,6 +81,15 @@ html {
 .logo,
 .logo-left {
   cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.exit-right:hover,
+.exit:hover,
+.logo:hover,
+.logo-left:hover {
+  opacity: 0.8;
 }
 
 .hyperlink {
@@ -110,6 +131,7 @@ body {
           justify-content: center;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 body .modal-trigger {
@@ -132,8 +154,45 @@ body .modal-trigger {
   background-color: #182327;
 }
 
+body .Wrapper-All.open {
+  -webkit-animation: open-animate 0.25s ease-in 1 alternate;
+          animation: open-animate 0.25s ease-in 1 alternate;
+}
+
+@-webkit-keyframes open-animate {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.3;
+    background: none;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    background: none;
+  }
+}
+
+@keyframes open-animate {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0.3;
+    background: none;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    background: none;
+  }
+}
+
 body .modal-wrapper-All {
   display: none !important;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
   width: 100%;
   height: 100%;
 }
@@ -155,7 +214,7 @@ body .modal-wrapper-All .Wrapper-All {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e5e5e5;
+  background: #e5e5e5;
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-1,

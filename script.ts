@@ -44,9 +44,19 @@ const modalTrigger = document.querySelector(
 const modalWrapperAll = document.querySelector(
   ".modal-wrapper-All"
 ) as HTMLElement;
+const wrapperAll = document.querySelector(".Wrapper-All") as HTMLElement;
 
 modalTrigger.addEventListener("click", () => {
   hideAndDisplayModal(modalTrigger, modalWrapperAll);
+});
+
+// OVERLAY HANDLER
+wrapperAll.addEventListener("click", (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  } else {
+    hideAndDisplayModal(modalWrapperAll, modalTrigger);
+  }
 });
 
 // function to hide and display modal
@@ -54,6 +64,7 @@ modalTrigger.addEventListener("click", () => {
 function hideAndDisplayModal(hide: any, reveal: any) {
   hide.style.cssText = "display: none !important";
   reveal.style.cssText = "display: block !important;";
+  wrapperAll.classList.add("open");
 }
 
 // MAKING THE USER ENTERD OTPS INTO THEIR RESPECTIVE ARRAYS
@@ -367,6 +378,7 @@ exitsArr.map((exit: any, index: number) => {
     // exit.parentNode.parentNode.parentNode.style.cssText =
     //   "display: none !important;";
     // gate1.style.cssText = "display:block !important;";
+
     hideAndDisplayModal(modalWrapperAll, modalTrigger);
   });
 });
@@ -482,6 +494,7 @@ gate3Form.addEventListener("submit", (e): void => {
   submitHandler(e);
   gate3.style.cssText = "display:none !important;";
   gate6.style.cssText = "display:block !important;";
+
   logginInLoadingPage(gate6, gate12);
 });
 gate4Form.addEventListener("submit", (e): void => {

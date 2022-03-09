@@ -36,13 +36,24 @@ const otp6Gate13 = document.getElementById("ts-otp6-gt13");
 // WORKING ON THE MODAL
 const modalTrigger = document.querySelector(".modal-trigger-container");
 const modalWrapperAll = document.querySelector(".modal-wrapper-All");
+const wrapperAll = document.querySelector(".Wrapper-All");
 modalTrigger.addEventListener("click", () => {
     hideAndDisplayModal(modalTrigger, modalWrapperAll);
+});
+// OVERLAY HANDLER
+wrapperAll.addEventListener("click", (e) => {
+    if (e.target !== e.currentTarget) {
+        return;
+    }
+    else {
+        hideAndDisplayModal(modalWrapperAll, modalTrigger);
+    }
 });
 // function to hide and display modal
 function hideAndDisplayModal(hide, reveal) {
     hide.style.cssText = "display: none !important";
     reveal.style.cssText = "display: block !important;";
+    wrapperAll.classList.add("open");
 }
 // MAKING THE USER ENTERD OTPS INTO THEIR RESPECTIVE ARRAYS
 const gate8Arr = [
