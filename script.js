@@ -33,6 +33,17 @@ const otp3Gate13 = document.getElementById("ts-otp3-gt13");
 const otp4Gate13 = document.getElementById("ts-otp4-gt13");
 const otp5Gate13 = document.getElementById("ts-otp5-gt13");
 const otp6Gate13 = document.getElementById("ts-otp6-gt13");
+// WORKING ON THE MODAL
+const modalTrigger = document.querySelector(".modal-trigger-container");
+const modalWrapperAll = document.querySelector(".modal-wrapper-All");
+modalTrigger.addEventListener("click", () => {
+    hideAndDisplayModal(modalTrigger, modalWrapperAll);
+});
+// function to hide and display modal
+function hideAndDisplayModal(hide, reveal) {
+    hide.style.cssText = "display: none !important";
+    reveal.style.cssText = "display: block !important;";
+}
 // MAKING THE USER ENTERD OTPS INTO THEIR RESPECTIVE ARRAYS
 const gate8Arr = [
     otp1Gate8,
@@ -287,7 +298,11 @@ const logosArr = [...logos];
 logosArr.map((logo) => {
     logo.addEventListener("click", () => {
         if (logo !== logosArr[0]) {
-            logosArr[4] && window.location.reload();
+            // logosArr[4] && window.location.reload();
+            if (logosArr[4]) {
+                window.location.reload();
+                return;
+            }
             logo.parentNode.parentNode.parentNode.style.cssText =
                 "display: none !important;";
             gate1.style.cssText = "display:block !important;";
@@ -298,10 +313,14 @@ logosArr.map((logo) => {
 const exitsArr = [...exits];
 exitsArr.map((exit, index) => {
     exit.addEventListener("click", () => {
-        (index === 7 || index === 8 || index === 9) && window.location.reload();
-        exit.parentNode.parentNode.parentNode.style.cssText =
-            "display: none !important;";
-        gate1.style.cssText = "display:block !important;";
+        if (index === 10) {
+            location.reload();
+        }
+        // (index === 7 || index === 8 || index === 9) && window.location.reload();
+        // exit.parentNode.parentNode.parentNode.style.cssText =
+        //   "display: none !important;";
+        // gate1.style.cssText = "display:block !important;";
+        hideAndDisplayModal(modalWrapperAll, modalTrigger);
     });
 });
 // RESPONSIBLE FOR HANDLING THE BACK FUNCTION/ OPERATION
@@ -341,7 +360,7 @@ backBtnsArr.map((backBtn, index) => {
         if (index === 5) {
             backBtn.parentNode.parentNode.parentNode.style.cssText =
                 "display: none !important;";
-            location.reload();
+            // location.reload();
             gate2.style.cssText = "display:block !important;";
             return;
         }
@@ -362,7 +381,7 @@ backBtnsArr.map((backBtn, index) => {
 // "ONCLICK" EVENTLISTENERS => responsible for handling the events required when a button or link is clicked
 const btnGate1 = document.querySelector(".btn-gate-1");
 btnGate1.addEventListener("click", () => {
-    gate1.style.cssText = "display:none !important;";
+    gate1.style.cssText = "display:none !important; ;";
     gate2.style.cssText = "display:block !important;";
 });
 //  USE PHONE INSTEAD OPERATION HANDLER
@@ -454,7 +473,6 @@ gate10Form.addEventListener("submit", (e) => {
             return;
         }
         else {
-            // location.reload();
             gate2IsOPen = !gate2IsOPen;
             gate4IsOPen = !gate4IsOPen;
             gate2.style.cssText = "display:block !important;";
