@@ -254,6 +254,7 @@ body .modal-wrapper-All .Wrapper-All .gate-1 {
   border-radius: 16px;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-1__main {
@@ -404,6 +405,7 @@ body .modal-wrapper-All .Wrapper-All .gate-13__main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: -60px !important;
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-2__main__header,
@@ -1104,7 +1106,7 @@ body .modal-wrapper-All .Wrapper-All footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 1.2rem;
-  margin-top: 16px;
+  margin-top: 5px;
   color: #666666;
   padding-bottom: 10px;
 }
@@ -1317,6 +1319,7 @@ body .modal-wrapper-All .Wrapper-All .gate-11__main__content {
   .Wrapper-All .gate-13__main__content {
     -webkit-box-shadow: unset !important;
             box-shadow: unset !important;
+    border-radius: unset !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
