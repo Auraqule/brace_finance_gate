@@ -59,6 +59,11 @@ $btnColor: #1da95b;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.25s;
+  img {
+    margin-right: 6px;
+    height: 16px;
+    width: 16px;
+  }
   &:hover {
     opacity: 0.8;
   }
@@ -87,18 +92,18 @@ $btnColor: #1da95b;
 .password-eye-reveal {
   position: absolute;
   right: 16px;
-  top: 40%;
+  top: 30%;
   cursor: pointer;
 }
 
 #auto-fill-authentication-tel {
-  padding-left: 100px !important;
+  padding-left: 50px !important;
   padding-right: 50px !important;
   background-repeat: no-repeat;
   background-position: 90% 50%;
 }
 .ts-tel {
-  padding-left: 100px !important;
+  padding-left: 50px !important;
 }
 // .password-eye-reveal {
 //   display: none;
@@ -181,7 +186,7 @@ body {
       .gate-11,
       .gate-12,
       .gate-13 {
-        width: 97%;
+        width: 100%;
         min-height: 600px !important;
         max-height: 550px;
         min-width: 320px;
@@ -203,11 +208,16 @@ body {
           justify-content: center;
           &__header {
             .logo {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 40px;
               margin: auto;
               width: 142px;
               height: 37.2px;
               img {
                 margin: auto;
+                margin-right: 12.3px;
               }
             }
             .exit-right {
@@ -296,6 +306,16 @@ body {
           flex-direction: column;
 
           &__header {
+            .logo-left {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 26px;
+              color: #ffffff;
+              img {
+                margin-right: 7.97px;
+              }
+            }
             border-top-right-radius: 16px;
             border-top-left-radius: 16px;
             padding: 0 24px;
@@ -582,11 +602,54 @@ body {
       }
 
       //   GATE 11/PAGE 11(Connection Successful Message Page) MODIFICATION STYLING GOES HERE
-      .gate-11--modify {
+      .gate-11 {
         min-height: 375px !important;
-        max-height: 440px;
-        &__main__content {
-          height: auto !important;
+        &__main {
+          // max-height: 440px;
+          margin-bottom: -40px !important;
+          &__content {
+            padding-bottom: 80px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 418px) {
+  .Wrapper-All {
+    justify-content: flex-start !important;
+    .gate-1 {
+      border-radius: unset !important;
+      box-shadow: unset !important;
+      // border-bottom-left-radius: 16px !important;
+      // border-bottom-right-radius: 16px !important;
+      max-width: 100% !important;
+    }
+    .gate-2,
+    .gate-3,
+    .gate-4,
+    .gate-5,
+    .gate-6,
+    .gate-7,
+    .gate-8,
+    .gate-9,
+    .gate-10,
+    .gate-11,
+    .gate-12,
+    .gate-13 {
+      max-width: 100% !important;
+      &__main {
+        max-height: 600px;
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+          border-top-right-radius: unset !important;
+          border-top-left-radius: unset !important;
+        }
+        &__content {
+          box-shadow: unset !important;
         }
       }
     }

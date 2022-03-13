@@ -67,6 +67,12 @@ html {
   transition: all 0.25s;
 }
 
+.back-left img {
+  margin-right: 6px;
+  height: 16px;
+  width: 16px;
+}
+
 .back-left:hover {
   opacity: 0.8;
 }
@@ -104,19 +110,19 @@ html {
 .password-eye-reveal {
   position: absolute;
   right: 16px;
-  top: 40%;
+  top: 30%;
   cursor: pointer;
 }
 
 #auto-fill-authentication-tel {
-  padding-left: 100px !important;
+  padding-left: 50px !important;
   padding-right: 50px !important;
   background-repeat: no-repeat;
   background-position: 90% 50%;
 }
 
 .ts-tel {
-  padding-left: 100px !important;
+  padding-left: 50px !important;
 }
 
 body {
@@ -230,7 +236,7 @@ body .modal-wrapper-All .Wrapper-All .gate-10,
 body .modal-wrapper-All .Wrapper-All .gate-11,
 body .modal-wrapper-All .Wrapper-All .gate-12,
 body .modal-wrapper-All .Wrapper-All .gate-13 {
-  width: 97%;
+  width: 100%;
   min-height: 600px !important;
   max-height: 550px;
   min-width: 320px;
@@ -265,6 +271,16 @@ body .modal-wrapper-All .Wrapper-All .gate-1__main {
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-1__main__header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
   margin: auto;
   width: 142px;
   height: 37.2px;
@@ -272,6 +288,7 @@ body .modal-wrapper-All .Wrapper-All .gate-1__main__header .logo {
 
 body .modal-wrapper-All .Wrapper-All .gate-1__main__header .logo img {
   margin: auto;
+  margin-right: 12.3px;
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-1__main__header .exit-right {
@@ -416,6 +433,46 @@ body .modal-wrapper-All .Wrapper-All .gate-13__main__header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .modal-wrapper-All .Wrapper-All .gate-2__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-3__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-4__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-5__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-6__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-7__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-8__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-9__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-10__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-11__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-12__main__header .logo-left,
+body .modal-wrapper-All .Wrapper-All .gate-13__main__header .logo-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+body .modal-wrapper-All .Wrapper-All .gate-2__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-3__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-4__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-5__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-6__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-7__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-8__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-9__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-10__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-11__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-12__main__header .logo-left img,
+body .modal-wrapper-All .Wrapper-All .gate-13__main__header .logo-left img {
+  margin-right: 7.97px;
 }
 
 body .modal-wrapper-All .Wrapper-All .gate-2__main__content,
@@ -1172,12 +1229,94 @@ body .modal-wrapper-All .Wrapper-All .gate-13__main__content .code-issue-resolve
   color: #1da95b;
 }
 
-body .modal-wrapper-All .Wrapper-All .gate-11--modify {
+body .modal-wrapper-All .Wrapper-All .gate-11 {
   min-height: 375px !important;
-  max-height: 440px;
 }
 
-body .modal-wrapper-All .Wrapper-All .gate-11--modify__main__content {
-  height: auto !important;
+body .modal-wrapper-All .Wrapper-All .gate-11__main {
+  margin-bottom: -40px !important;
+}
+
+body .modal-wrapper-All .Wrapper-All .gate-11__main__content {
+  padding-bottom: 80px !important;
+}
+
+@media (max-width: 418px) {
+  .Wrapper-All {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .Wrapper-All .gate-1 {
+    border-radius: unset !important;
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
+    max-width: 100% !important;
+  }
+  .Wrapper-All .gate-2,
+  .Wrapper-All .gate-3,
+  .Wrapper-All .gate-4,
+  .Wrapper-All .gate-5,
+  .Wrapper-All .gate-6,
+  .Wrapper-All .gate-7,
+  .Wrapper-All .gate-8,
+  .Wrapper-All .gate-9,
+  .Wrapper-All .gate-10,
+  .Wrapper-All .gate-11,
+  .Wrapper-All .gate-12,
+  .Wrapper-All .gate-13 {
+    max-width: 100% !important;
+  }
+  .Wrapper-All .gate-2__main,
+  .Wrapper-All .gate-3__main,
+  .Wrapper-All .gate-4__main,
+  .Wrapper-All .gate-5__main,
+  .Wrapper-All .gate-6__main,
+  .Wrapper-All .gate-7__main,
+  .Wrapper-All .gate-8__main,
+  .Wrapper-All .gate-9__main,
+  .Wrapper-All .gate-10__main,
+  .Wrapper-All .gate-11__main,
+  .Wrapper-All .gate-12__main,
+  .Wrapper-All .gate-13__main {
+    max-height: 600px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Wrapper-All .gate-2__main__header,
+  .Wrapper-All .gate-3__main__header,
+  .Wrapper-All .gate-4__main__header,
+  .Wrapper-All .gate-5__main__header,
+  .Wrapper-All .gate-6__main__header,
+  .Wrapper-All .gate-7__main__header,
+  .Wrapper-All .gate-8__main__header,
+  .Wrapper-All .gate-9__main__header,
+  .Wrapper-All .gate-10__main__header,
+  .Wrapper-All .gate-11__main__header,
+  .Wrapper-All .gate-12__main__header,
+  .Wrapper-All .gate-13__main__header {
+    border-top-right-radius: unset !important;
+    border-top-left-radius: unset !important;
+  }
+  .Wrapper-All .gate-2__main__content,
+  .Wrapper-All .gate-3__main__content,
+  .Wrapper-All .gate-4__main__content,
+  .Wrapper-All .gate-5__main__content,
+  .Wrapper-All .gate-6__main__content,
+  .Wrapper-All .gate-7__main__content,
+  .Wrapper-All .gate-8__main__content,
+  .Wrapper-All .gate-9__main__content,
+  .Wrapper-All .gate-10__main__content,
+  .Wrapper-All .gate-11__main__content,
+  .Wrapper-All .gate-12__main__content,
+  .Wrapper-All .gate-13__main__content {
+    -webkit-box-shadow: unset !important;
+            box-shadow: unset !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -297,6 +297,15 @@ const gate10Form = document.querySelector("#ts-gate10-form") as HTMLFormElement;
 userEmailInput = document.querySelector("#ts-email") as HTMLInputElement;
 userTelephoneInput = document.querySelector("#ts-tel") as HTMLInputElement;
 
+// INPUT AN HYPHEN TO PHONE NO INPUT WHEN USER TYPES ANY DIGIT
+userTelephoneInput.addEventListener(
+  "keydown",
+  () => {
+    userTelephoneInput.value += " ";
+  },
+  { once: true }
+);
+
 // QUERY DOM FOR EMAIL AND TELEPHONE INPUTS TO AUTO FILL ALREADY ENTERED USER EMAIL AND PHONE NO
 autofillUserEnteredEmail = document.querySelector(
   "#auto-fill-authentication-email"
@@ -304,6 +313,9 @@ autofillUserEnteredEmail = document.querySelector(
 autofillUserEnteredPhoneNo = document.querySelector(
   "#auto-fill-authentication-tel"
 ) as HTMLInputElement;
+
+// QUERY THE DOM FOR NEW USER PASSWORD
+newUserpassword = document.querySelector("#new-user-password")!;
 
 // QUERY DOM FOR SPANS TO DISPLAY EMAIL AND PHONE NO => I.E PAGES/GATES 8,9,12,13
 displayUserEnteredEmail = document.querySelectorAll(
@@ -320,6 +332,7 @@ const LoginForwardIcons = document.querySelectorAll(
 
 const LoginForwardIconsArr: any = [...LoginForwardIcons];
 LoginForwardIconsArr.map((LoginForwardIcon: any, index: number): void => {
+  LoginForwardIcon.style.pointerEvents = "none";
   LoginForwardIcon.addEventListener("click", (): void => {
     if (index === 0) {
       gate8.style.cssText = "display:none !important;";
@@ -356,8 +369,8 @@ logosArr.map((logo: any) => {
     if (logo !== logosArr[0]) {
       // logosArr[4] && window.location.reload();
       if (logosArr[4]) {
-        window.location.reload();
-        return;
+        // window.location.reload();
+        // return;
       }
       logo.parentNode.parentNode.parentNode.style.cssText =
         "display: none !important;";
@@ -409,12 +422,16 @@ backBtnsArr.map((backBtn: any, index: number) => {
       backBtn.parentNode.parentNode.parentNode.style.cssText =
         "display: none !important;";
       gate2.style.cssText = "display:block !important;";
+      gate2IsOPen = false;
+      gate4IsOPen = false;
       return;
     }
     if (index === 4) {
       backBtn.parentNode.parentNode.parentNode.style.cssText =
         "display: none !important;";
-      gate2.style.cssText = "display:block !important;";
+      gate4.style.cssText = "display:block !important;";
+      gate2IsOPen = false;
+      gate4IsOPen = false;
       return;
     }
     if (index === 5) {
@@ -422,6 +439,8 @@ backBtnsArr.map((backBtn: any, index: number) => {
         "display: none !important;";
       // location.reload();
       gate2.style.cssText = "display:block !important;";
+      gate2IsOPen = false;
+      gate4IsOPen = false;
       return;
     }
     if (index === 6) {
@@ -444,6 +463,7 @@ const btnGate1 = document.querySelector(".btn-gate-1") as HTMLButtonElement;
 btnGate1.addEventListener("click", () => {
   gate1.style.cssText = "display:none !important; ;";
   gate2.style.cssText = "display:block !important;";
+  userEmailInput.focus();
 });
 
 //  USE PHONE INSTEAD OPERATION HANDLER
@@ -454,6 +474,7 @@ const usePhoneInstead = document.querySelector(
 usePhoneInstead?.addEventListener("click", (): void => {
   gate2.style.cssText = "display:none !important;";
   gate4.style.cssText = "display:block !important;";
+  userTelephoneInput.focus();
 });
 
 //  USE EMAIL INSTEAD OPERATION HANDLER
@@ -474,15 +495,22 @@ const submitHandler = (e: any): void => {
 // "ONSUBMIT" EVENTLISTENERS => responsible for handling whaterver happens anytime a form is submitted
 gate2Form.addEventListener("submit", (e): void => {
   submitHandler(e);
+
   // TOGGLE GATE-2 TO EITHER OPEN OR CLOSE
   gate2IsOPen = !gate2IsOPen;
   gate2.style.cssText = "display:none !important;";
   // ROUTE THE USER TO THE APPROPRIATE GATE BASED ON THE CONDITION THAT THEY HAVE THEIR RECORD IN THE DATABASE OR NOT
   //  IF THE USER HAS A RECORD ? ROUTE THEM TO THE LOGIN GATE : OTHERWISE TO THE SIGN UP GATE
-
-  userEmailInput.value === "auraqule@gmail.com"
-    ? (gate3.style.cssText = "display:block !important;")
-    : (gate10.style.cssText = "display:block !important;");
+  if (userEmailInput.value === "auraqule@gmail.com") {
+    gate3.style.cssText = "display:block !important;";
+    const oldUserPasswordFromEmail = document.querySelector(
+      ".old-user-password-from-email"
+    ) as HTMLInputElement;
+    oldUserPasswordFromEmail.focus();
+  } else {
+    gate10.style.cssText = "display:block !important;";
+    newUserpassword.focus();
+  }
 
   autofillUserEnteredEmail.value = userEmailInput.value;
   const twoDisplayUserEnteredEmail = [...displayUserEnteredEmail];
@@ -497,18 +525,26 @@ gate3Form.addEventListener("submit", (e): void => {
 
   logginInLoadingPage(gate6, gate12);
 });
+
 gate4Form.addEventListener("submit", (e): void => {
   submitHandler(e);
   // TOGGLE GATE-4 TO EITHER OPEN OR CLOSE
   gate4IsOPen = !gate4IsOPen;
   gate4.style.cssText = "display:none !important;";
 
-  userTelephoneInput.value === "7066389644"
-    ? (gate5.style.cssText = "display:block !important;")
-    : (gate10.style.cssText = "display:block !important;");
+  if (userTelephoneInput.value === "+234 7066389644") {
+    gate5.style.cssText = "display:block !important;";
+    const oldUserPasswordFromTel = document.querySelector(
+      ".old-user-password-from-tel"
+    ) as HTMLInputElement;
+    oldUserPasswordFromTel.focus();
+  } else {
+    gate10.style.cssText = "display:block !important;";
+    newUserpassword.focus();
+  }
 
   autofillUserEnteredPhoneNo.value = userTelephoneInput.value;
-  autofillUserEnteredPhoneNo.value.length <= 10
+  autofillUserEnteredPhoneNo.value.length <= 14
     ? (autofillUserEnteredPhoneNo.style.cssText = `background-image:url("./Assets/check-mark.png"); `)
     : null;
   const twoDisplayUserEnteredPhoneNo = [...displayUserEnteredPhoneNo];
@@ -537,7 +573,7 @@ gate7Form.addEventListener("submit", (e): void => {
 
 gate10Form.addEventListener("submit", (e): void => {
   submitHandler(e);
-  newUserpassword = document.querySelector("#new-user-password")!;
+
   // NEW USER AUTHENTICATION REGEX PATTERN
   const userPasswordPattern = /^(?=.*\d).{9,}$/;
   if (userPasswordPattern.test(newUserpassword.value)) {
@@ -560,7 +596,6 @@ gate10Form.addEventListener("submit", (e): void => {
       if (newUserpassword.value.length >= 8) {
         if (userPasswordPattern.test(newUserpassword.value)) {
           newUserpassword.style.cssText = "border-color: #1da95b !important";
-          console.log(newUserpassword.value.length);
         } else {
           newUserpassword.style.cssText = "border-color: red !important";
         }
@@ -579,17 +614,24 @@ const forgotPasswordLinks = document.querySelectorAll(
   ".Forgot-password"
 ) as NodeList;
 
+const forgotPasswordRecoverEmail = document.querySelector(
+  ".forgot-password-recover-email"
+) as HTMLInputElement;
+
 const forgotPasswordLinksArr = [...forgotPasswordLinks];
 forgotPasswordLinksArr.map((forgotPasswordLink, index: number): void => {
   forgotPasswordLink.addEventListener("click", () => {
     if (index === 0) {
       gate3.style.cssText = "display:none !important;";
       gate7.style.cssText = "display:block !important;";
+      forgotPasswordRecoverEmail.focus();
       return;
     }
     if (index === 1) {
       gate5.style.cssText = "display:none !important;";
       gate7.style.cssText = "display:block !important;";
+      forgotPasswordRecoverEmail.focus();
+
       return;
     }
   });
@@ -609,6 +651,7 @@ forgotPasswordUsePhoneInstead.addEventListener("click", (): void => {
   if (
     forgotPasswordUsePhoneInstead.textContent?.includes("Use Phone Instead")
   ) {
+    forgotPasswordUsePhoneInsteadInput.focus();
     forgotPasswordUsePhoneInstead.textContent = "Use Email Instead";
     forgotPasswordUsePhoneInsteadLabel.textContent = "Phone number";
     forgotPasswordUsePhoneInsteadInput.type = "tel";
