@@ -366,6 +366,9 @@ const backBtns = document.querySelectorAll(".back-left");
 const logosArr = [...logos];
 logosArr.map((logo: any) => {
   logo.addEventListener("click", () => {
+    if (logosArr[3]) {
+      return;
+    }
     if (logo !== logosArr[0]) {
       // logosArr[4] && window.location.reload();
       if (logosArr[4]) {
