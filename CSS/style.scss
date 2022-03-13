@@ -653,6 +653,8 @@ body {
         &__content {
           box-shadow: unset !important;
           border-radius: unset !important;
+          border-top-left-radius: 16px !important;
+          border-top-right-radius: 16px !important;
         }
       }
     }
