@@ -1243,7 +1243,7 @@ body .modal-wrapper-All .Wrapper-All .gate-11__main__content {
   padding-bottom: 80px !important;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 480px) {
   .Wrapper-All {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
