@@ -547,7 +547,7 @@ gate4Form.addEventListener("submit", (e): void => {
   }
 
   autofillUserEnteredPhoneNo.value = userTelephoneInput.value;
-  autofillUserEnteredPhoneNo.value.length <= 14
+  autofillUserEnteredPhoneNo.value.length <= 15
     ? (autofillUserEnteredPhoneNo.style.cssText = `background-image:url("./Assets/check-mark.png"); `)
     : null;
   const twoDisplayUserEnteredPhoneNo = [...displayUserEnteredPhoneNo];
@@ -607,7 +607,7 @@ gate10Form.addEventListener("submit", (e): void => {
       }
     });
     newUserpassword.style.cssText = "border-color: red !important";
-    newUserpassword.value = "";
+    // newUserpassword.value = "";
     // newUserpassword.setAttribute("placeholder", "Invalid Password!");
   }
 });
