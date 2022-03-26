@@ -39,7 +39,8 @@ $btnColor: #1da95b;
 
 .privacy-policy {
   font-size: 1.2rem;
-  width: 201px;
+  min-width: 201px;
+  max-width: 201px;
   text-align: center;
   margin: auto;
   line-height: 20px;
@@ -132,7 +133,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: bold;
     color: $greenTextColor;
     cursor: pointer;
@@ -354,7 +355,7 @@ body {
               max-width: 208px;
             }
             &__form {
-              font-size: 1.4rem;
+              font-size: 1.6rem;
               color: #182327;
 
               label {
@@ -574,7 +575,7 @@ body {
             }
           }
           .code-issue {
-            font-size: 1.6rem;
+            font-size: 1.6px;
             font-weight: 600;
             margin-bottom: 125px;
             span {
