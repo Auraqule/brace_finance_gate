@@ -47,6 +47,7 @@ html {
 
 .privacy-policy span {
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .back-left {
@@ -239,7 +240,6 @@ body .modal-wrapper-All .Wrapper-All .gate-12,
 body .modal-wrapper-All .Wrapper-All .gate-13 {
   width: 100%;
   min-height: 600px !important;
-  max-height: 550px;
   min-width: 320px;
   max-width: 380px;
   padding: 0 0 41px;
