@@ -1103,13 +1103,18 @@ body .modal-wrapper-All .Wrapper-All footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 171px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 1.2rem;
   margin-top: 5px;
   color: #666666;
   padding-bottom: 10px;
+}
+
+body .modal-wrapper-All .Wrapper-All footer img {
+  margin-right: 4px;
 }
 
 body .modal-wrapper-All .Wrapper-All footer span {
