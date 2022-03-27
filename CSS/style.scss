@@ -355,7 +355,7 @@ body {
               max-width: 208px;
             }
             &__form {
-              font-size: 1.6rem;
+              font-size: 1.4rem;
               color: #182327;
 
               label {
@@ -619,7 +619,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   .Wrapper-All {
     justify-content: flex-start !important;
     .gate-1 {

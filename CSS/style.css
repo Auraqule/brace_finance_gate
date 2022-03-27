@@ -560,7 +560,7 @@ body .modal-wrapper-All .Wrapper-All .gate-10__main__content__form,
 body .modal-wrapper-All .Wrapper-All .gate-11__main__content__form,
 body .modal-wrapper-All .Wrapper-All .gate-12__main__content__form,
 body .modal-wrapper-All .Wrapper-All .gate-13__main__content__form {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #182327;
 }
 
@@ -1244,7 +1244,7 @@ body .modal-wrapper-All .Wrapper-All .gate-11__main__content {
   padding-bottom: 80px !important;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
   .Wrapper-All {
     -webkit-box-pack: start !important;
         -ms-flex-pack: start !important;
