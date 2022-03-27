@@ -1191,6 +1191,7 @@ body .modal-wrapper-All .Wrapper-All .gate-9__main__content .code-issue,
 body .modal-wrapper-All .Wrapper-All .gate-12__main__content .code-issue,
 body .modal-wrapper-All .Wrapper-All .gate-13__main__content .code-issue {
   --webkit-font-size: 1.6px;
+  font-size: 1.6px;
   font-weight: 600;
   margin-bottom: 125px;
 }
