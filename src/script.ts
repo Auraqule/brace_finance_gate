@@ -6,10 +6,9 @@ interface IScriptResult {
   error: boolean
 }
 
-export default function useLazerpayScript(): boolean[] {
+export default function useBraceScript(): boolean[] {
   const src =
-    'https://cdn.jsdelivr.net/gh/LazerPay-Finance/checkout-build@main/checkout%401.0.1/dist/index.min.js'
-
+    'https://cdn.jsdelivr.net/gh/Auraqule/brace_finance_gate@main/script.ts'
   const [state, setState] = useState<IScriptResult>({
     loaded: false,
     error: false

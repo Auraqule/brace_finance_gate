@@ -2,9 +2,9 @@
 import { useEffect } from 'react'
 import { PaymentProps } from './@types/index'
 import useScript from './script'
-import { callLazerpayPop } from './actions/lazerpay-actions'
+import { callBracePop } from './actions/brace-actions'
 
-export default function useLazerpayPayment(options: PaymentProps) {
+export default function useBracePayment(options: PaymentProps) {
   const [scriptLoaded, scriptError] = useScript()
   const {
     publicKey,
@@ -22,11 +22,11 @@ export default function useLazerpayPayment(options: PaymentProps) {
 
   function initializePayment(): void {
     if (scriptError) {
-      throw new Error('Unable to load Lazerpay inline script')
+      throw new Error('Unable to load Brace inline script')
     }
 
     if (scriptLoaded) {
-      const LazerpayArgs = {
+      const BraceArgs = {
         publicKey,
         customerName,
         customerEmail,
@@ -39,13 +39,13 @@ export default function useLazerpayPayment(options: PaymentProps) {
         onSuccess,
         onClose
       }
-      callLazerpayPop(LazerpayArgs)
+      callBracePop(BraceArgs)
     }
   }
 
   useEffect(() => {
     if (scriptError) {
-      throw new Error('Unable to load lazerpay inline script')
+      throw new Error('Unable to load Brace inline script')
     }
   }, [scriptError])
 

@@ -1,1 +1,1 @@
-export { default as useLazerpay } from './useLazerpay'
+export { default as useBrace } from './useBrace'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useLazerpay } from './dist/index'
+import { useBrace } from './dist/index'
 
 const App = () => {
   const config = {
@@ -24,12 +24,12 @@ const App = () => {
     }
   }
   console.log(config, 'here')
-  const initializePayment = useLazerpay(config)
+  const initializePayment = useBrace(config)
 
   return (
     <div>
-      <h1>Lazerpay React test</h1>
-      <button onClick={initializePayment}>Pay with Lazerpay</button>
+      <h1>Brace React test</h1>
+      <button onClick={initializePayment}>Pay with Brace</button>
     </div>
   )
 }

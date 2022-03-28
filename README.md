@@ -1,25 +1,17 @@
-# Lazerpay Official react sdk
+# Brace Finance Official react sdk
 
-Lazerpay SDK allows you accept payments easily in your react application
-
-<img src="https://raw.githubusercontent.com/njokuScript/screenshots/master/react-1.png" alt='screenshot of SDK'  />
-
-<img src="https://raw.githubusercontent.com/njokuScript/screenshots/master/react-2.png" alt='screenshot of SDK'  />
-
-<img src="https://raw.githubusercontent.com/njokuScript/screenshots/master/react-3.png" alt='screenshot of SDK'  />
-
-<img src="https://raw.githubusercontent.com/njokuScript/screenshots/master/react-4.png" alt='screenshot of SDK'  />
+Brace Finance SDK allows you accept payments easily in your react application
 
 ## Installation
 
 ```sh
-npm install lazerpay-react
+npm install brace-finance-react
 ```
 
 ## Usage
 
 ```js
-import { useLazerpay } from 'lazerpay-react'
+import { useBrace } from 'brace-finance-react'
 
 const App = () => {
   config = {
@@ -41,17 +33,19 @@ const App = () => {
     }
   }
 
-  const initializePayment = useLazerpay(config)
+  const initializePayment = useBrace(config)
 
   return (
     <div>
-      <h1>Lazerpay React test App</h1>
-      <button onClick={initializePayment}>Pay with Lazerpay</button>
+      <h1>Brace React test App</h1>
+      <button onClick={initializePayment}>Pay with Brace finance</button>
     </div>
   )
 }
 ```
+
 ### NOTE
+
 `reference` has to be updated after any successful partial payment to enable re-initialization.
 
 ## Configuration Options
@@ -69,7 +63,7 @@ const App = () => {
 ### <a name="publicKey"></a> `publicKey`
 
 **string: Required**
-Your public key can be found on your [dashboard](https://beta.lazerpay.finance) settings.
+Your public key can be found on your [dashboard](https://beta.brace.finance) settings.
 
 ### <a name="customerName"></a> `customerName`
 
@@ -116,7 +110,7 @@ This is called when a transaction is successfully. It returns a response.
 **(response) => { Void }: Required**
 This is called when a transaction fails. It returns a response.
 
-<!-- See the [event details](#lazerpayEvent) below. -->
+<!-- See the [event details](#brace-finance Event) below. -->
 
 ### <a name="onClose"></a> `onClose `
 
@@ -162,7 +156,7 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
 ## Support
 
-If you're having trouble with Lazerpay React Native SDK or your integration, please reach out to us at <help@lazerpay.finance> or come chat with us on Slack. We're more than happy to help you out.
+If you're having trouble with Brace-finance React Native SDK or your integration, please reach out to us at <help@brace.finance> or come chat with us on Slack. We're more than happy to help you out.
 
 ## License
 
