@@ -573,12 +573,9 @@ body {
               border-radius: 8px;
               padding-left: unset !important;
               &:focus {
+                outline: none;
                 border: none;
-                outline: 2px solid $greenTextColor;
-                border-radius: 8px !important;
-                -moz-outline-radius: 8px !important;
-                -webkit-outline-radius: 8px !important;
-                -webkit-border-radius: 8px !important;
+                box-shadow: 0 0 0 2pt $greenTextColor;
               }
             }
           }
