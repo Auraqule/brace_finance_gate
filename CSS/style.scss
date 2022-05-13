@@ -574,7 +574,7 @@ body {
               padding-left: unset !important;
               &:focus {
                 outline: none;
-                border: none;
+                // border: none;
                 box-shadow: 0 0 0 2pt $greenTextColor;
               }
             }

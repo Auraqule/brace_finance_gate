@@ -1183,7 +1183,6 @@ body .modal-wrapper-All .Wrapper-All .gate-9__main__content__form__otp input[typ
 body .modal-wrapper-All .Wrapper-All .gate-12__main__content__form__otp input[type="text"]:focus,
 body .modal-wrapper-All .Wrapper-All .gate-13__main__content__form__otp input[type="text"]:focus {
   outline: none;
-  border: none;
   -webkit-box-shadow: 0 0 0 2pt #1da95b;
           box-shadow: 0 0 0 2pt #1da95b;
 }
