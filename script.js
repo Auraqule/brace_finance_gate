@@ -112,6 +112,15 @@ function otpBoxFocusShiftHandler(currentOtpNo, nextOtpNo) {
         nextOtpNo.focus();
     }
 }
+// function to move the OTP input focus to the previous OTP input box
+function otpBoxFocusPrevHandler(currentOtpNo, prevOtpNo) {
+    currentOtpNo.addEventListener("keydown", function (event) {
+        const key = event.key; // const {key} = event; ES6+
+        if (!currentOtpNo.value && (key === "Backspace" || key === "Delete")) {
+            prevOtpNo.focus();
+        }
+    });
+}
 //  MOVES THE OTP INPUT FOCUS TO THE NEXT INPUT
 gate8Arr.map((otp, index) => {
     otp.addEventListener("input", () => {
@@ -207,6 +216,236 @@ gate13Arr.map((otp, index) => {
         }
         if (index === 4) {
             otpBoxFocusShiftHandler(otp5Gate13, otp6Gate13);
+            return;
+        }
+    });
+});
+// ROUTES TO THE PREVIOUS OTP box if the user clicks on the back or clear button
+gate8Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 1) {
+            otpBoxFocusPrevHandler(otp2Gate8, otp1Gate8);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusPrevHandler(otp3Gate8, otp2Gate8);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusPrevHandler(otp4Gate8, otp3Gate8);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusPrevHandler(otp5Gate8, otp4Gate8);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusPrevHandler(otp6Gate8, otp5Gate8);
+            return;
+        }
+    });
+});
+// ARROW CONTROL FUNCTION
+function otpBoxFocusArrowHandler(currentOtpNo, prevOtpNo, nextOtpNo) {
+    currentOtpNo.addEventListener("keydown", function (event) {
+        const key = event.key; // const {key} = event; ES6+
+        if (key === "ArrowLeft") {
+            prevOtpNo.focus();
+            return;
+        }
+        if (key === "ArrowRight") {
+            nextOtpNo.focus();
+            return;
+        }
+    });
+}
+// ROUTES TO THE PREVIOUS OTP box if the user clicks on the back or clear button
+gate9Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 1) {
+            otpBoxFocusPrevHandler(otp2Gate9, otp1Gate9);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusPrevHandler(otp3Gate9, otp2Gate9);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusPrevHandler(otp4Gate9, otp3Gate9);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusPrevHandler(otp5Gate9, otp4Gate9);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusPrevHandler(otp6Gate9, otp5Gate9);
+            return;
+        }
+    });
+});
+// ROUTES TO THE PREVIOUS OTP box if the user clicks on the back or clear button
+gate12Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 1) {
+            otpBoxFocusPrevHandler(otp2Gate12, otp1Gate12);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusPrevHandler(otp3Gate12, otp2Gate12);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusPrevHandler(otp4Gate12, otp3Gate12);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusPrevHandler(otp5Gate12, otp4Gate12);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusPrevHandler(otp6Gate12, otp5Gate12);
+            return;
+        }
+    });
+});
+// ROUTES TO THE PREVIOUS OTP box if the user clicks on the back or clear button
+gate13Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 1) {
+            otpBoxFocusPrevHandler(otp2Gate13, otp1Gate13);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusPrevHandler(otp3Gate13, otp2Gate13);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusPrevHandler(otp4Gate13, otp3Gate13);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusPrevHandler(otp5Gate13, otp4Gate13);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusPrevHandler(otp6Gate13, otp5Gate13);
+            return;
+        }
+    });
+});
+// USES THE ARROW BUTTONS TO MAKE FORWARD AND BACKWARD MOVEMENTS TO AND FRO THE OTP BOXES
+gate8Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 0) {
+            otpBoxFocusArrowHandler(otp1Gate8, otp1Gate8, otp2Gate8);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusArrowHandler(otp2Gate8, otp1Gate8, otp3Gate8);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusArrowHandler(otp3Gate8, otp2Gate8, otp4Gate8);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusArrowHandler(otp4Gate8, otp3Gate8, otp5Gate8);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusArrowHandler(otp5Gate8, otp4Gate8, otp6Gate8);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusArrowHandler(otp6Gate8, otp5Gate8, otp5Gate8);
+            return;
+        }
+    });
+});
+// USES THE ARROW BUTTONS TO MAKE FORWARD AND BACKWARD MOVEMENTS TO AND FRO THE OTP BOXES
+gate9Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 0) {
+            otpBoxFocusArrowHandler(otp1Gate9, otp1Gate9, otp2Gate9);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusArrowHandler(otp2Gate9, otp1Gate9, otp3Gate9);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusArrowHandler(otp3Gate9, otp2Gate9, otp4Gate9);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusArrowHandler(otp4Gate9, otp3Gate9, otp5Gate9);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusArrowHandler(otp5Gate9, otp4Gate9, otp6Gate9);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusArrowHandler(otp6Gate9, otp5Gate9, otp5Gate9);
+            return;
+        }
+    });
+});
+// USES THE ARROW BUTTONS TO MAKE FORWARD AND BACKWARD MOVEMENTS TO AND FRO THE OTP BOXES
+gate12Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 0) {
+            otpBoxFocusArrowHandler(otp1Gate12, otp1Gate12, otp2Gate12);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusArrowHandler(otp2Gate12, otp1Gate12, otp3Gate12);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusArrowHandler(otp3Gate12, otp2Gate12, otp4Gate12);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusArrowHandler(otp4Gate12, otp3Gate12, otp5Gate12);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusArrowHandler(otp5Gate12, otp4Gate12, otp6Gate12);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusArrowHandler(otp6Gate12, otp5Gate12, otp5Gate12);
+            return;
+        }
+    });
+});
+// USES THE ARROW BUTTONS TO MAKE FORWARD AND BACKWARD MOVEMENTS TO AND FRO THE OTP BOXES
+gate13Arr.map((otp, index) => {
+    otp.addEventListener("keydown", () => {
+        if (index === 0) {
+            otpBoxFocusArrowHandler(otp1Gate13, otp1Gate13, otp2Gate13);
+            return;
+        }
+        if (index === 1) {
+            otpBoxFocusArrowHandler(otp2Gate13, otp1Gate13, otp3Gate13);
+            return;
+        }
+        if (index === 2) {
+            otpBoxFocusArrowHandler(otp3Gate13, otp2Gate13, otp4Gate13);
+            return;
+        }
+        if (index === 3) {
+            otpBoxFocusArrowHandler(otp4Gate13, otp3Gate13, otp5Gate13);
+            return;
+        }
+        if (index === 4) {
+            otpBoxFocusArrowHandler(otp5Gate13, otp4Gate13, otp6Gate13);
+            return;
+        }
+        if (index === 5) {
+            otpBoxFocusArrowHandler(otp6Gate13, otp5Gate13, otp5Gate13);
             return;
         }
     });
